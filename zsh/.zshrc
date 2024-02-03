@@ -18,5 +18,5 @@ PROMPT='%d$ '
 
 # /usr/bin/keychain -q --nogui $HOME/.ssh/id_ed25519_github
 # source $HOME/.keychain/$(hostname)-sh
-eval $(keychain --eval --agents ssh id_ed25519)
+eval $(keychain --eval --agents ssh id_ed25519_github)
 alias vim='nvim'
