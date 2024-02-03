@@ -6,12 +6,12 @@
 ```zsh --version```
 
 ```chsh -s $(which zsh)```
-make zsh default shell
+to make zsh default shell
 
 ## install tmux
 ```sudo apt-get install tmux```
 
-install fuze
+## install fuze
 ```sudo apt-get install fuse -y```
 
 ## install neovim
