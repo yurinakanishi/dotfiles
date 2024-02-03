@@ -5,11 +5,14 @@
 
 ```zsh --version```
 
-make zsh default shell
 ```chsh -s $(which zsh)```
+make zsh default shell
 
 ## install tmux
 ```sudo apt-get install tmux```
+
+install fuze
+```sudo apt-get install fuse -y```
 
 ## install neovim
 ```curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage```
@@ -17,14 +20,13 @@ make zsh default shell
 ```chmod u+x nvim.appimage```
 
 ```./nvim.appimage```
-[ref](https://zenn.dev/apuspac/articles/neovim-tukau)
 
+[Ref](https://zenn.dev/apuspac/articles/neovim-tukau)
 
 ## Create Symbolic link
 
 1. ```chmod +x ~/dotfiles/scripts/create_symlinks.zsh```
 2. ```~/dotfiles/scripts/create_symlinks.zsh```
-
 
 ## If tmux key binding isn't applied, try below
 
