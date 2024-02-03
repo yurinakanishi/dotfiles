@@ -17,5 +17,5 @@ bindkey "^S" history-incremental-pattern-search-forward
 PROMPT='%d$ '
 
 /usr/bin/keychain -q --nogui $HOME/.ssh/id_ed25519_github
-source $HOME/.keychain/$(hostname)
+source $HOME/.keychain/$(hostname)-sh
 alias vim='nvim'
