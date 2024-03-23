@@ -34,6 +34,9 @@ vim.api.nvim_set_keymap('i', '[', '[]<Left>', {noremap = true})
 -- Automatically insert closing parenthesis and place cursor in the middle
 vim.api.nvim_set_keymap('i', '(', '()<Left>', {noremap = true})
 
+-- Automatically insert closing angle bracket and place cursor in the middle
+vim.api.nvim_set_keymap('i', '<', '<><left>', {noremap = true})
+
 -- Automatically insert closing double quotation and place cursor in the middle
 vim.api.nvim_set_keymap('i', '"', '""<Left>', {noremap = true})
 
@@ -44,10 +47,10 @@ vim.api.nvim_set_keymap('i', "'", "''<Left>", {noremap = true})
 vim.api.nvim_set_keymap('n', '<Esc><Esc>', ':nohlsearch<CR>', {noremap = true, silent = true})
 
 -- Map 'ss' to jump to the first non-blank character of the line in normal mode
-vim.api.nvim_set_keymap('n', 'ss', '^', {noremap = true})
+vim.api.nvim_set_keymap('n', 'hh', '^', {noremap = true})
 
 -- Map ';;' to jump to the end of the line in normal mode
-vim.api.nvim_set_keymap('n', ';;', '$', {noremap = true})
+vim.api.nvim_set_keymap('n', 'll', '$', {noremap = true})
 
 -- Create a command 'SS' that sources your .vimrc (useful if still using .vimrc or for similar tasks in init.lua)
 vim.api.nvim_create_user_command('SS', 'source ~/.vimrc', {})
