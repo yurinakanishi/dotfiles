@@ -47,10 +47,10 @@ vim.api.nvim_set_keymap('i', 'jk', '<Esc>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Esc><Esc>', ':nohlsearch<CR>', {noremap = true, silent = true})
 
 -- Map 'ss' to jump to the first non-blank character of the line in normal mode
-vim.api.nvim_set_keymap('n', 'ss', '^', {noremap = true})
+-- vim.api.nvim_set_keymap('n', 'ss', '^', {noremap = true})
 
 -- Map ';;' to jump to the end of the line in normal mode
-vim.api.nvim_set_keymap('n', ';;', '$', {noremap = true})
+-- vim.api.nvim_set_keymap('n', ';;', '$', {noremap = true})
 
 -- Load lazy.nvim plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
