@@ -105,6 +105,10 @@ treed() {
 # source $HOME/.keychain/$(hostname)-sh
 # eval $(keychain --eval --agents ssh id_ed25519_github)
 
+# Load volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
 # Load nodenv
 export PATH="$HOME/.nodenv/shims:$PATH"
 
