@@ -25,6 +25,48 @@ vim.o.shiftwidth = 2
 -- Map 'jk' to escape in insert mode
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', {noremap = true})
 
+-- Visual mode mapping to enter visual block mode with Ctrl+V
+vim.api.nvim_set_keymap('x', 'v', '<C-v>', { noremap = true, silent = true })
+
+-- Visual mode mapping to select entire file with ,
+vim.api.nvim_set_keymap('x', ',', '<Esc>ggVG', { noremap = true, silent = true })
+
+-- Normal mode mapping to move 10 lines down with J
+vim.api.nvim_set_keymap('n', 'J', '10j', { noremap = true, silent = true })
+
+-- Normal mode mapping to move 10 lines up with K
+vim.api.nvim_set_keymap('n', 'K', '10k', { noremap = true, silent = true })
+
+-- Normal mode mapping to undo with U
+vim.api.nvim_set_keymap('n', 'U', '<C-r>', { noremap = true, silent = true })
+
+-- Normal mode mapping to go to the next tab with gl
+vim.api.nvim_set_keymap('n', 'gl', 'gt', { noremap = true, silent = true })
+
+-- Normal mode mapping to go to the previous tab with gh
+vim.api.nvim_set_keymap('n', 'gh', 'gT', { noremap = true, silent = true })
+
+-- Normal mode mapping to scroll cursor to the bottom of the screen with zk
+vim.api.nvim_set_keymap('n', 'zk', 'zb', { noremap = true, silent = true })
+
+-- Normal mode mapping to scroll cursor to the top of the screen with zj
+vim.api.nvim_set_keymap('n', 'zj', 'zt', { noremap = true, silent = true })
+
+-- Normal mode mapping to open location list with tl
+vim.api.nvim_set_keymap('n', 'tl', '<C-l>', { noremap = true, silent = true })
+
+-- Normal mode mapping to open tag list with th
+vim.api.nvim_set_keymap('n', 'th', '<C-t>', { noremap = true, silent = true })
+
+-- Normal mode mapping to open a new tab with gk
+vim.api.nvim_set_keymap('n', 'gk', ':tabedit<CR>', { noremap = true, silent = true })
+
+-- Normal mode mapping to delete the current buffer with gj
+vim.api.nvim_set_keymap('n', 'gj', ':bdelete<CR>', { noremap = true, silent = true })
+
+-- Normal mode mapping to force delete the current buffer with gJ
+vim.api.nvim_set_keymap('n', 'gJ', ':bdelete!<CR>', { noremap = true, silent = true })
+
 -- Automatically insert closing brace and place cursor in the middle
 -- vim.api.nvim_set_keymap('i', '{', '{}<Left>', {noremap = true})
 
