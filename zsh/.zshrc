@@ -9,6 +9,13 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_IGNORE_DUPS
 setopt SHARE_HISTORY
+
+# zplug
+source ~/.zplug/init.zsh
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-autosuggestions", defer:2
+zplug load
+
 # bindkey "^P" history-beginning-search-backward
 # bindkey "^N" history-beginning-search-forward
 stty -ixon

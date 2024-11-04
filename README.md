@@ -16,6 +16,11 @@ Clone this repo to your root directory(`git clone git@github.com:yurinakanishi/d
 
 to make zsh default shell
 
+## Install zplug
+```curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh```
+
+https://github.com/zplug/zplug
+
 ## Install git prompt for show current branch of git in terminal
 
 `mkdir ~/.zsh`
