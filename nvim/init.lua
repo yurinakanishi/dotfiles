@@ -38,7 +38,7 @@ vim.api.nvim_set_keymap('n', 'J', '10j', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'K', '10k', { noremap = true, silent = true })
 
 -- Normal mode mapping to undo with U
-vim.api.nvim_set_keymap('n', 'U', '<C-r>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', 'U', '<C-r>', { noremap = true, silent = true })
 
 -- Normal mode mapping to go to the next tab with gl
 vim.api.nvim_set_keymap('n', 'gl', 'gt', { noremap = true, silent = true })
