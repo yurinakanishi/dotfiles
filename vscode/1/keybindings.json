@@ -5,6 +5,21 @@
     "when": "neovim.mode == normal && editorTextFocus"
   },
   {
+    "key": "t k",
+    "command": "editor.action.goToTypeDefinition",
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "t j",
+    "command": "workbench.action.gotoSymbol",
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "t r",
+    "command": "editor.action.goToReferences",
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
     "key": "t h",
     "command": "workbench.action.navigateBack",
     "when": "neovim.mode == normal && editorTextFocus"
@@ -14,28 +29,29 @@
     "command": "editor.action.showHover",
     "when": "neovim.mode == normal && editorTextFocus"
   },
-  // {
-  //   "key": "ctrl+t",
-  //   "command": "workbench.action.terminal.focus",
-  //   "when": "editorTextFocus"
-  // },
-  // {
-  //   "key": "ctrl+t",
-  //   "command": "workbench.action.terminal.focus",
-  //   "when": "workbench.scm focus"
-  // },
-  // {
-  //   "key": "ctrl+t",
-  //   "command": "workbench.action.toggleMaximizedPanel",
-  //   "when": "editorTextFocus"
-  // },
-  // {
-  //   "key": "ctrl+t",
-  //   "command": "workbench.action.togglePanel",
-  //   "when": "terminalFocus"
-  // },
   {
-    "key": "g j",
+    "key": "space t",
+    "command": "workbench.action.terminal.focus",
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "space t",
+    "command": "workbench.action.terminal.focus",
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  // Terminal
+  {
+    "key": "space t",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "space t",
+    "command": "workbench.action.togglePanel",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "space k",
     "command": "workbench.action.closeActiveEditor",
     "when": "neovim.mode == normal && editorTextFocus"
   },
@@ -98,18 +114,171 @@
     "args": { "text": "\n" },
     "when": "terminalFocus"
   },
+  // Search
   {
-    "key": "ctrl+n",
-    "command": "explorer.newFile"
+    "key": "ctrl+m",
+    "command": "editor.actions.findWithArgs",
+    "when": "neovim.mode == normal && editorTextFocus"
+  },
+  // All project search
+  {
+    "key": "ctrl+8",
+    "command": "workbench.action.findInFiles",
+    "when": "!searchViewletFocus"
   },
   {
-    "key": "ctrl+shift+alt+n",
+    "key": "ctrl+8",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "searchViewletFocus"
+  },
+  // Debug
+  {
+    "key": "ctrl+7",
+    "command": "workbench.view.debug",
+    "when": "!debugViewletFocus"
+  },
+  {
+    "key": "ctrl+7",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "debugViewletFocus"
+  },
+  //Docker
+  {
+    "key": "ctrl+6",
+    "command": "workbench.view.extension.dockerView",
+    "when": "!dockerViewletFocus"
+  },
+  {
+    "key": "ctrl+6",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "dockerViewletFocus"
+  },
+  // Extensions
+  {
+    "key": "ctrl+5",
+    "command": "workbench.view.extensions",
+    "when": "!extensionsViewletFocus"
+  },
+  {
+    "key": "ctrl+5",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "extensionsViewletFocus"
+  },
+  // Source control
+  {
+    "key": "ctrl+9",
+    "command": "workbench.scm.focus",
+    "when": "!scmViewletFocus"
+  },
+  {
+    "key": "ctrl+9",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "scmViewletFocus"
+  },
+  // File Explorer
+  {
+    "key": "shift+ctrl+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus && !terminalFocus"
+  },
+  {
+    "key": "shift+ctrl+m",
     "command": "explorer.newFolder"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "alt+cmd+backspace",
+    "command": "-deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "v",
+    "command": "explorer.openToSide",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "shift+y",
+    "command": "copyRelativeFilePath",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "shift+alt+ctrl+c",
+    "command": "-copyRelativeFilePath",
+    "when": "!editorFocus"
+  },
+  // Tab navigation
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.nextEditor",
+    "when": "!terminalFocus && !sideBarFocus && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.previousEditor",
+    "when": "!terminalFocus && !sideBarFocus && vim.mode != 'Insert'"
+  },
+  // explorer: toggle
+  {
+    "key": "ctrl+0",
+    "command": "workbench.explorer.fileView.focus",
+    "when": "!filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "filesExplorerFocus"
+  },
+  // explorer: open
+  {
+    "key": "shift+o",
+    "command": "macros.selectAndToggleSidebar",
+    "when": "explorerViewletFocus && explorerViewletVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  // terminal: new
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.terminal.new"
+  },
+  // terminal: move
+  {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  // terminal: kill
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
   }
-  // {
-  //   "key": "ctrl+m",
-  //   "command": "editor.actions.findWithArgs",
-  //   "when": "neovim.mode == normal && editorTextFocus"
-  // }
 ]
 
