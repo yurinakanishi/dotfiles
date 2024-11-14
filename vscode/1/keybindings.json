@@ -56,7 +56,7 @@
     "when": "neovim.mode == normal && editorTextFocus"
   },
   {
-    "key": "shift+ctrl+;",
+    "key": "ctrl+'",
     "command": "git.openChange"
   },
   {
@@ -119,6 +119,15 @@
     "key": "ctrl+m",
     "command": "editor.actions.findWithArgs",
     "when": "neovim.mode == normal && editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+m",
+    "command": "editor.action.startFindReplaceAction",
+    "args": { "query": "dfdf", "replace": "" }
+  },
+  {
+    "key": "ctrl+shift+8",
+    "command": "workbench.action.replaceInFiles"
   },
   // All project search
   {
@@ -183,7 +192,8 @@
   },
   {
     "key": "shift+ctrl+m",
-    "command": "explorer.newFolder"
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus && !terminalFocus"
   },
   {
     "key": "d",
@@ -260,7 +270,7 @@
   },
   // terminal: new
   {
-    "key": "ctrl+shift+n",
+    "key": "space n",
     "command": "workbench.action.terminal.new"
   },
   // terminal: move
@@ -281,4 +291,3 @@
     "when": "terminalFocus"
   }
 ]
-
