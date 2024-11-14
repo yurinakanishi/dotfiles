@@ -1,0 +1,161 @@
+{
+  "remote.SSH.remotePlatform": {
+    "CFn-dev": "linux",
+    "*********": "linux"
+  },
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/*/*.html": "django-html"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "editor.formatOnType": true,
+  "notebook.cellToolbarLocation": {
+    "default": "right"
+  },
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": "on",
+  "editor.accessibilitySupport": "off",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[django-html]": {
+    "editor.defaultFormatter": "batisteo.vscode-django"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "cSpell.userWords": [
+    "gsap",
+    "gtag",
+    "Meshmell",
+    "Nakanishi",
+    "tailwindcss",
+    "tanstack",
+    "Yurimell"
+  ],
+  "explorer.confirmDelete": false,
+  "[scss]": {
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "python.linting.enabled": true,
+  "python.defaultInterpreterPath": "C:\\******\\******\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "python.condaPath": "C:\\******\\******\\anaconda3\\python.exe",
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.formatOnType": true,
+    // "editor.defaultFormatter": null,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+    // "editor.defaultFormatter": "ms-python.python",
+  },
+  // "python.formatting.blackPath": "C:\\******\\******\\appdata\\local\\programs\\python\\python311\\lib\\site-packages\\black",
+  "python.formatting.provider": "black",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "emmet.includeLanguages": {
+    "django-html": "html",
+    "django-css": "css"
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "notebook.lineNumbers": "on",
+  "notebook.showFoldingControls": "always",
+  "notebook.editorOptionsCustomizations": {},
+  "editor.inlineSuggest.enabled": true,
+  "notebook.formatOnSave.enabled": true,
+  "window.zoomLevel": 1,
+  "go.toolsManagement.autoUpdate": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "editor.minimap.enabled": false,
+  "workbench.startupEditor": "none",
+  "workbench.panel.defaultLocation": "bottom",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.editor.enablePreview": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.currentLine.pullRequests.enabled": false,
+  "gitlens.currentLine.scrollable": false,
+  "gitlens.blame.highlight.enabled": false,
+  "gitlens.hovers.currentLine.details": false,
+  "gitlens.hovers.currentLine.changes": false,
+  "gitlens.hovers.annotations.details": false,
+  "gitlens.hovers.annotations.changes": false,
+  "gitlens.hovers.pullRequests.enabled": false,
+  "gitlens.hovers.autolinks.enabled": false,
+  "gitlens.hovers.avatars": false,
+  "gitlens.hovers.enabled": false,
+  "gitlens.hovers.autolinks.enhanced": false,
+  "gitlens.hovers.currentLine.enabled": false,
+  "gitlens.hovers.annotations.enabled": false,
+  "gitlens.graph.showGhostRefsOnRowHover": false,
+  "gitlens.graph.highlightRowsOnRefHover": false,
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.editor.empty.hint": "hidden",
+  "git.enableSmartCommit": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "editor.lineNumbers": "relative",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "vscode-neovim.compositeKeys": {
+    "jk": {
+      "command": "vscode-neovim.escape"
+    }
+  },
+  "github.copilot.preferredAccount": "*********",
+  "remote.autoForwardPortsSource": "hybrid",
+  "gitlens.launchpad.indicator.enabled": false,
+  "gitlens.ai.experimental.model": "openai:gpt-4o",
+  "terminal.integrated.fontSize": 18,
+  "git-graph.dialog.fetchRemote.prune": true,
+  "workbench.activityBar.location": "top",
+  "workbench.editor.historyBasedLanguageDetection": false,
+  "window.restoreFullscreen": true,
+  "window.newWindowDimensions": "maximized",
+  // Make cursor movement similar to NERDTree
+  "workbench.list.keyboardNavigation": "simple",
+  // Disable file preview to keep opened file tabs persistent
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  // Use the macros plugin to register a command that closes the sidebar when opening a file
+  "macros": {
+    "selectAndToggleSidebar": [
+      "list.select",
+      "workbench.action.toggleSidebarVisibility"
+    ]
+  }
+}

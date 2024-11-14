@@ -1,293 +1,393 @@
 [
+  // Editor Navigation
+  // Go to declaration
   {
     "key": "t l",
     "command": "editor.action.goToDeclaration",
     "when": "neovim.mode == normal && editorTextFocus"
   },
+  // Go to type definition
   {
-    "key": "t k",
+    "key": "t t",
     "command": "editor.action.goToTypeDefinition",
     "when": "neovim.mode == normal && editorTextFocus"
   },
+  // Go to symbol
   {
-    "key": "t j",
+    "key": "t s",
     "command": "workbench.action.gotoSymbol",
     "when": "neovim.mode == normal && editorTextFocus"
   },
+  // Go to references
   {
     "key": "t r",
     "command": "editor.action.goToReferences",
     "when": "neovim.mode == normal && editorTextFocus"
   },
+  // Navigate back
   {
     "key": "t h",
     "command": "workbench.action.navigateBack",
     "when": "neovim.mode == normal && editorTextFocus"
   },
+  // Show hover
   {
     "key": "space h",
     "command": "editor.action.showHover",
     "when": "neovim.mode == normal && editorTextFocus"
   },
+
+  // Terminal Focus
+  // Focus terminal
   {
-    "key": "space t",
+    "key": "ctrl+t",
     "command": "workbench.action.terminal.focus",
     "when": "neovim.mode == normal && editorTextFocus"
   },
+  // Toggle maximized panel in terminal
   {
-    "key": "space t",
-    "command": "workbench.action.terminal.focus",
-    "when": "neovim.mode == normal && editorTextFocus"
-  },
-  // Terminal
-  {
-    "key": "space t",
+    "key": "ctrl+t",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "terminalFocus"
   },
+  // Toggle panel in terminal
   {
-    "key": "space t",
+    "key": "ctrl+t",
     "command": "workbench.action.togglePanel",
     "when": "terminalFocus"
   },
+  // Close active editor
   {
-    "key": "space k",
+    "key": "ctrl+w",
     "command": "workbench.action.closeActiveEditor",
     "when": "neovim.mode == normal && editorTextFocus"
   },
+
+  // Git Commands
+  // Open change view in Git
   {
     "key": "ctrl+'",
     "command": "git.openChange"
   },
+  // Open file in Git
   {
     "key": "ctrl+;",
     "command": "git.openFile"
   },
+
+  // Terminal Cursor Control
+  // Move cursor up
   {
     "key": "ctrl+p",
     "command": "cursorUp",
     "when": "terminalFocus"
   },
+  // Move cursor down
   {
     "key": "ctrl+n",
     "command": "cursorDown",
     "when": "terminalFocus"
   },
+  // Move cursor right
   {
     "key": "ctrl+f",
     "command": "cursorRight",
     "when": "terminalFocus"
   },
+  // Move cursor left
   {
     "key": "ctrl+b",
     "command": "cursorLeft",
     "when": "terminalFocus"
   },
+  // Move to beginning of line
   {
     "key": "ctrl+a",
     "command": "cursorHome",
     "when": "terminalFocus"
   },
+  // Move to end of line
   {
     "key": "ctrl+e",
     "command": "cursorEnd",
     "when": "terminalFocus"
   },
+  // Delete character to the right
   {
     "key": "ctrl+d",
     "command": "deleteRight",
     "when": "terminalFocus"
   },
+  // Delete character to the left
   {
     "key": "ctrl+h",
     "command": "deleteLeft",
     "when": "terminalFocus"
   },
+  // Delete all characters to the right
   {
     "key": "ctrl+k",
     "command": "deleteAllRight",
     "when": "terminalFocus"
   },
+  // Insert newline
   {
     "key": "ctrl+m",
     "command": "type",
     "args": { "text": "\n" },
     "when": "terminalFocus"
   },
-  // Search
+
+  // Search and Replace
+  // Find with arguments
   {
     "key": "ctrl+m",
     "command": "editor.actions.findWithArgs",
     "when": "neovim.mode == normal && editorTextFocus"
   },
+  // Find and replace in editor
   {
     "key": "ctrl+shift+m",
     "command": "editor.action.startFindReplaceAction",
-    "args": { "query": "dfdf", "replace": "" }
   },
+  // Replace in files
   {
     "key": "ctrl+shift+8",
     "command": "workbench.action.replaceInFiles"
   },
-  // All project search
+    // Move 
+    {
+      "key": "ctrl+n",
+      "command": "search.action.focusNextSearchResult",
+      "when": "hasSearchResult && searchViewletVisible && !inputBoxFocus"
+    },
+    {
+      "key": "ctrl+shift+n",
+      "command": "search.action.focusPreviousSearchResult",
+      "when": "hasSearchResult && searchViewletVisible && !inputBoxFocus"
+    },
+  // Find in files
   {
     "key": "ctrl+8",
     "command": "workbench.action.findInFiles",
     "when": "!searchViewletFocus"
   },
+  // Toggle sidebar visibility in search view
   {
     "key": "ctrl+8",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "searchViewletFocus"
   },
-  // Debug
+
+  // Debug View
+  // Open debug view
   {
     "key": "ctrl+7",
     "command": "workbench.view.debug",
     "when": "!debugViewletFocus"
   },
+  // Toggle sidebar visibility in debug view
   {
     "key": "ctrl+7",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "debugViewletFocus"
   },
-  //Docker
+
+  // Docker View
+  // Open Docker view
   {
     "key": "ctrl+6",
     "command": "workbench.view.extension.dockerView",
     "when": "!dockerViewletFocus"
   },
+  // Toggle sidebar visibility in Docker view
   {
     "key": "ctrl+6",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "dockerViewletFocus"
   },
-  // Extensions
+
+  // Extensions View
+  // Open extensions view
   {
     "key": "ctrl+5",
     "command": "workbench.view.extensions",
     "when": "!extensionsViewletFocus"
   },
+  // Toggle sidebar visibility in extensions view
   {
     "key": "ctrl+5",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "extensionsViewletFocus"
   },
-  // Source control
+
+  // Source Control
+  // Open source control view
   {
     "key": "ctrl+9",
     "command": "workbench.scm.focus",
     "when": "!scmViewletFocus"
   },
+  // Toggle sidebar visibility in source control view
   {
     "key": "ctrl+9",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "scmViewletFocus"
   },
+
   // File Explorer
+  // Create new file
   {
-    "key": "shift+ctrl+n",
+    "key": "ctrl+shift+alt+n",
     "command": "explorer.newFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus && !terminalFocus"
   },
+  // Create new folder
   {
-    "key": "shift+ctrl+m",
+    "key": "ctrl+shift+alt+m",
     "command": "explorer.newFolder",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus && !terminalFocus"
   },
+  // Delete file
   {
     "key": "d",
     "command": "deleteFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
-  {
-    "key": "alt+cmd+backspace",
-    "command": "-deleteFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-  },
+  // Rename file
   {
     "key": "r",
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-  {
-    "key": "enter",
-    "command": "-renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
+  // Open file to side
   {
     "key": "v",
     "command": "explorer.openToSide",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
+  // Copy file
   {
     "key": "y",
     "command": "filesExplorer.copy",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
+  // Paste file
   {
     "key": "p",
     "command": "filesExplorer.paste",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
+  // Copy relative file path
   {
     "key": "shift+y",
     "command": "copyRelativeFilePath",
     "when": "!editorFocus"
   },
-  {
-    "key": "shift+alt+ctrl+c",
-    "command": "-copyRelativeFilePath",
-    "when": "!editorFocus"
-  },
-  // Tab navigation
+
+  // Tab Navigation
+  // Next editor
   {
     "key": "ctrl+l",
     "command": "workbench.action.nextEditor",
     "when": "!terminalFocus && !sideBarFocus && vim.mode != 'Insert'"
   },
+  // Previous editor
   {
     "key": "ctrl+h",
     "command": "workbench.action.previousEditor",
     "when": "!terminalFocus && !sideBarFocus && vim.mode != 'Insert'"
   },
-  // explorer: toggle
+
+  // Explorer: toggle
+  // Focus file explorer
   {
     "key": "ctrl+0",
     "command": "workbench.explorer.fileView.focus",
     "when": "!filesExplorerFocus"
   },
+  // Toggle sidebar visibility in file explorer
   {
     "key": "ctrl+0",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "filesExplorerFocus"
   },
-  // explorer: open
+
+  // Terminal Actions
+  // Create new terminal
   {
-    "key": "shift+o",
-    "command": "macros.selectAndToggleSidebar",
-    "when": "explorerViewletFocus && explorerViewletVisible && !explorerResourceIsFolder && !inputFocus"
-  },
-  // terminal: new
-  {
-    "key": "space n",
+    "key": "ctrl+shift+t",
     "command": "workbench.action.terminal.new"
   },
-  // terminal: move
+  // Focus next terminal
   {
-    "key": "ctrl+shift+l",
+    "key": "ctrl+shift+j",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
   },
+  // Focus previous terminal
   {
-    "key": "ctrl+shift+h",
+    "key": "ctrl+shift+k",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
   },
-  // terminal: kill
+  // Kill terminal
   {
     "key": "ctrl+w",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
-  }
+  },
+
+  // Git Actions
+  // Checkout Git branch
+  {
+    "key": "alt+c",
+    "command": "git.checkout"
+  },
+  // Open Git Graph
+  {
+    "key": "alt+g",
+    "command": "workbench.scm.action.git-graph.view"
+  },
+
+  // Tab Management
+  // Close all tabs
+  {
+    "key": "ctrl+shift+alt+y",
+    "command": "workbench.action.closeAllEditors"
+  },
+  // Close other tabs
+  {
+    "key": "ctrl+shift+alt+r",
+    "command": "workbench.action.closeOtherEditors"
+  },
+  // ???
+  {
+    "key": "space space",
+    "command": "workbench.action.quickOpen",
+    "when": "neovim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space g d",
+    "command": "editor.action.revealDefinition",
+    "when": "neovim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space g i",
+    "command": "editor.action.goToImplementation",
+    "when": "neovim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "s",
+    "command": "explorer.openToSide",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.moveEditorToNextGroup"
+  },
+  {
+  "key": "ctrl+alt+h",
+  "command": "workbench.action.moveEditorToPreviousGroup"
+}
 ]
