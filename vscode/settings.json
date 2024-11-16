@@ -147,8 +147,6 @@
   "workbench.editor.historyBasedLanguageDetection": false,
   "window.restoreFullscreen": true,
   "window.newWindowDimensions": "maximized",
-  // Make cursor movement similar to NERDTree
-  "workbench.list.keyboardNavigation": "simple",
   // Disable file preview to keep opened file tabs persistent
   "workbench.editor.enablePreviewFromQuickOpen": false,
   // Use the macros plugin to register a command that closes the sidebar when opening a file

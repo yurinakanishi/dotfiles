@@ -24,6 +24,18 @@
     "command": "editor.action.goToReferences",
     "when": "neovim.mode == normal && editorTextFocus"
   },
+  // Reveal definition 
+  {
+    "key": "space g d",
+    "command": "editor.action.revealDefinition",
+    "when": "neovim.mode == 'Normal' && editorTextFocus"
+  },
+  // Go to implementation
+  {
+    "key": "space g i",
+    "command": "editor.action.goToImplementation",
+    "when": "neovim.mode == 'Normal' && editorTextFocus"
+  },
   // Navigate back
   {
     "key": "t h",
@@ -284,13 +296,19 @@
     "command": "copyRelativeFilePath",
     "when": "!editorFocus"
   },
+  // Open file as new group to the side
+  {
+    "key": "ctrl+l",
+    "command": "explorer.openToSide",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
 
   // Tab Navigation
   // Next editor
   {
     "key": "ctrl+l",
     "command": "workbench.action.nextEditor",
-    "when": "!terminalFocus && !sideBarFocus && vim.mode != 'Insert'"
+    "when": "!terminalFocus && !sideBarFocus && vim.mode != 'Insert' && !filesExplorerFocus && inputFocus"
   },
   // Previous editor
   {
@@ -323,13 +341,11 @@
   {
     "key": "ctrl+shift+j",
     "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus"
   },
   // Focus previous terminal
   {
     "key": "ctrl+shift+k",
     "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus"
   },
   // Kill terminal
   {
@@ -361,33 +377,24 @@
     "key": "ctrl+shift+alt+r",
     "command": "workbench.action.closeOtherEditors"
   },
-  // ???
-  {
-    "key": "space space",
-    "command": "workbench.action.quickOpen",
-    "when": "neovim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "key": "space g d",
-    "command": "editor.action.revealDefinition",
-    "when": "neovim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "space g i",
-    "command": "editor.action.goToImplementation",
-    "when": "neovim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "s",
-    "command": "explorer.openToSide",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
+  // Move editor to next group
   {
     "key": "ctrl+alt+l",
     "command": "workbench.action.moveEditorToNextGroup"
   },
+  // Move editor to preivioup group
   {
-  "key": "ctrl+alt+h",
-  "command": "workbench.action.moveEditorToPreviousGroup"
-}
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.moveEditorToPreviousGroup"
+  },
+  // Split editor to right
+  {
+    "key": "alt+right",
+    "command": "workbench.action.splitEditorRight"
+  },
+  // Join all editor groups
+  {
+    "key": "alt+left", 
+    "command": "workbench.action.joinAllGroups"
+  }
 ]
