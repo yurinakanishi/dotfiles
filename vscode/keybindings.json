@@ -24,7 +24,7 @@
     "command": "editor.action.goToReferences",
     "when": "neovim.mode == normal && editorTextFocus"
   },
-  // Reveal definition 
+  // Reveal definition
   {
     "key": "space g d",
     "command": "editor.action.revealDefinition",
@@ -160,24 +160,24 @@
   // Find and replace in editor
   {
     "key": "ctrl+shift+m",
-    "command": "editor.action.startFindReplaceAction",
+    "command": "editor.action.startFindReplaceAction"
   },
   // Replace in files
   {
     "key": "ctrl+shift+8",
     "command": "workbench.action.replaceInFiles"
   },
-    // Move 
-    {
-      "key": "ctrl+n",
-      "command": "search.action.focusNextSearchResult",
-      "when": "hasSearchResult && searchViewletVisible && !inputBoxFocus"
-    },
-    {
-      "key": "ctrl+shift+n",
-      "command": "search.action.focusPreviousSearchResult",
-      "when": "hasSearchResult && searchViewletVisible && !inputBoxFocus"
-    },
+  // Move
+  {
+    "key": "ctrl+n",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult && searchViewletVisible && !inputBoxFocus"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult && searchViewletVisible && !inputBoxFocus"
+  },
   // Find in files
   {
     "key": "ctrl+8",
@@ -250,15 +250,13 @@
   // File Explorer
   // Create new file
   {
-    "key": "ctrl+shift+alt+n",
-    "command": "explorer.newFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus && !terminalFocus"
+    "key": "ctrl+n",
+    "command": "explorer.newFile"
   },
   // Create new folder
   {
-    "key": "ctrl+shift+alt+m",
-    "command": "explorer.newFolder",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus && !terminalFocus"
+    "key": "alt+n",
+    "command": "explorer.newFolder"
   },
   // Delete file
   {
@@ -340,12 +338,12 @@
   // Focus next terminal
   {
     "key": "ctrl+shift+j",
-    "command": "workbench.action.terminal.focusNext",
+    "command": "workbench.action.terminal.focusNext"
   },
   // Focus previous terminal
   {
     "key": "ctrl+shift+k",
-    "command": "workbench.action.terminal.focusPrevious",
+    "command": "workbench.action.terminal.focusPrevious"
   },
   // Kill terminal
   {
@@ -382,7 +380,7 @@
     "key": "ctrl+alt+l",
     "command": "workbench.action.moveEditorToNextGroup"
   },
-  // Move editor to preivioup group
+  // Move editor to previous group
   {
     "key": "ctrl+alt+h",
     "command": "workbench.action.moveEditorToPreviousGroup"
@@ -394,7 +392,7 @@
   },
   // Join all editor groups
   {
-    "key": "alt+left", 
+    "key": "alt+left",
     "command": "workbench.action.joinAllGroups"
   }
 ]
