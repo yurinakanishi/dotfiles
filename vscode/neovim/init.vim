@@ -10,6 +10,8 @@ xnoremap v <C-v>
 xnoremap , <Esc>ggVG
 nnoremap J 10j
 nnoremap K 10k
+vnoremap J 10j
+vnoremap K 10k
 " nnoremap U <c-r>
 
 " For vanilla neovim
