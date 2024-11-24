@@ -171,12 +171,12 @@
   {
     "key": "ctrl+n",
     "command": "search.action.focusNextSearchResult",
-    "when": "hasSearchResult && searchViewletVisible && !inputBoxFocus"
+    "when": "hasSearchResult && searchViewletVisible"
   },
   {
     "key": "ctrl+shift+n",
     "command": "search.action.focusPreviousSearchResult",
-    "when": "hasSearchResult && searchViewletVisible && !inputBoxFocus"
+    "when": "hasSearchResult && searchViewletVisible"
   },
   // Find in files
   {
@@ -250,12 +250,12 @@
   // File Explorer
   // Create new file
   {
-    "key": "ctrl+n",
+    "key": "alt+shift+n",
     "command": "explorer.newFile"
   },
   // Create new folder
   {
-    "key": "alt+n",
+    "key": "ctrl+alt+shift+n",
     "command": "explorer.newFolder"
   },
   // Delete file
