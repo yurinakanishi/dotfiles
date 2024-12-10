@@ -1,47 +1,4 @@
 [
-  // Editor Navigation
-  // Go to declaration
-  {
-    "key": "t l",
-    "command": "editor.action.goToDeclaration",
-    "when": "neovim.mode == normal && editorTextFocus"
-  },
-  // Go to type definition
-  {
-    "key": "t t",
-    "command": "editor.action.goToTypeDefinition",
-    "when": "neovim.mode == normal && editorTextFocus"
-  },
-  // Go to symbol
-  {
-    "key": "t s",
-    "command": "workbench.action.gotoSymbol",
-    "when": "neovim.mode == normal && editorTextFocus"
-  },
-  // Go to references
-  {
-    "key": "t r",
-    "command": "editor.action.goToReferences",
-    "when": "neovim.mode == normal && editorTextFocus"
-  },
-  // Reveal definition
-  {
-    "key": "space g d",
-    "command": "editor.action.revealDefinition",
-    "when": "neovim.mode == 'Normal' && editorTextFocus"
-  },
-  // Go to implementation
-  {
-    "key": "space g i",
-    "command": "editor.action.goToImplementation",
-    "when": "neovim.mode == 'Normal' && editorTextFocus"
-  },
-  // Navigate back
-  {
-    "key": "t h",
-    "command": "workbench.action.navigateBack",
-    "when": "neovim.mode == normal && editorTextFocus"
-  },
   // Show hover
   {
     "key": "space h",
@@ -146,7 +103,9 @@
   {
     "key": "ctrl+m",
     "command": "type",
-    "args": { "text": "\n" },
+    "args": {
+      "text": "\n"
+    },
     "when": "terminalFocus"
   },
 
