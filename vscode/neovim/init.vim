@@ -7,7 +7,7 @@ set showcmd
 set hlsearch
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 xnoremap v <C-v>
-xnoremap a <Esc>ggVG
+xnoremap <C-a> <Esc>ggVG
 nnoremap J 10j
 nnoremap K 10k
 vnoremap J 10j
